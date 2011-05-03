@@ -8,12 +8,14 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+
 		Set<DomainObject> objectSet = new TreeSet<DomainObject>(new DomainObjectComparator());
-		objectSet.add(new DomainObject("Helga","Kommentar"));
-		objectSet.add(new DomainObject("Walter","Kommentar"));
-		objectSet.add(new DomainObject("Hannah","Kommentar"));
-		objectSet.add(new DomainObject("Paul","Kommentar"));
-		objectSet.add(new DomainObject("Claudia","Kommentar"));
+				
+		objectSet.add(DomainFactory.createDomainObject("Helga","Kommentar"));
+		objectSet.add(DomainFactory.createDomainObject("Walter","Kommentar"));
+		objectSet.add(DomainFactory.createDomainObject("Hannah","Kommentar"));
+		objectSet.add(DomainFactory.createDomainObject("Paul","Kommentar"));
+		objectSet.add(DomainFactory.createDomainObject("Claudia","Kommentar"));
 
 		for (DomainObject domainObject : objectSet) {
   			LOGGER.debug(domainObject.toString());

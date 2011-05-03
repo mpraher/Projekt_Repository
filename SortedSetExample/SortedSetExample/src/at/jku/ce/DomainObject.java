@@ -9,11 +9,11 @@ public class DomainObject {
 	/**
  	 * Default constructor
  	 */	
-	public DomainObject() {
+	protected DomainObject() {
 		super();
 	}
 
-	public DomainObject(String uuid, String comment) {
+	protected DomainObject(String uuid, String comment) {
   		super();
   		this.uuid = uuid;
 		this.comment=comment;
